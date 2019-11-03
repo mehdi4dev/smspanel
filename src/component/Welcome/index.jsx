@@ -1,18 +1,19 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 const Welcome =()=>{
     return(
     <div>
-        {/* <header>
+        <header>
             <nav className="navbar">
             <ul className="main-nav">
                 <li className="main-logo">
                 <img src="./asset/jpg/1533276535.png" alt="" />
                 </li>
-                <li onclick="location.href='#'"><span>ورود</span> </li>
-                <li onclick="location.href='#'"><span>ثبت نام</span></li>
+                <Link to={'/login'} className="Link"><li><span>ورود</span> </li></Link>
+                <Link to={'/signup'} className="Link"><li><span>ثبت نام</span></li></Link> 
             </ul> 
             </nav>
-        </header> */}
+        </header>
         <section id="first-body-container">
             <div className="flex-container">
             <div className="left">
@@ -28,7 +29,10 @@ const Welcome =()=>{
             <div className="container">
             <div className="img-start">
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo assumenda, possimus ab praesentium enim, officia, cupiditate molestias saepe magnam consequuntur tempora amet vero. Consequatur fuga blanditiis eligendi vel consequuntur non.</p>
-                <button className="btn btn-start" type="submit" onclick="location.href='#'">شروع کنید</button>
+                <Link to={'/login'} className="Link">
+                    <button className="btn btn-start">شروع کنید</button>
+                </Link>
+                
             </div>
             </div>
         </section>
